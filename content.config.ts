@@ -5,7 +5,6 @@ const createEnum = (options: [string, ...string[]]) => z.enum(options)
 const createBaseSchema = () => z.object({
   title: z.string().nonempty(),
   description: z.string().nonempty(),
-  headline: z.string().nonempty()
 })
 
 const createLinkSchema = () => z.object({
@@ -32,6 +31,7 @@ export const collections = {
     type: 'page',
     schema: z.object({
       hero: z.object({
+        headline: z.string().nonempty(),
         links: z.array(createLinkSchema())
       }),
       section: createBaseSchema().extend({

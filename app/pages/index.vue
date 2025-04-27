@@ -26,7 +26,7 @@ useSeoMeta({
     </div>
 
     <UPageHero
-      :headline="page.headline"
+      :headline="page.hero.headline"
       :description="page.description"
       :links="page.hero.links"
       :ui="{ container: 'md:pt-18 lg:pt-20' }"
