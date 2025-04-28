@@ -1,3 +1,4 @@
+import { steps } from '#build/ui-pro/prose'
 import { defineCollection, z } from '@nuxt/content'
 
 const createEnum = (options: [string, ...string[]]) => z.enum(options)
@@ -35,6 +36,7 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
       section: createBaseSchema().extend({
+        abc: z.string().optional(),
         headline: z.string().optional(),
         images: z.object({
           mobile: z.string().optional(),
@@ -87,6 +89,24 @@ export const collections = {
       }),
       cta: createBaseSchema().extend({
         links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  calc: defineCollection({
+    source: 'calc.yml',
+    type: 'data',
+    schema: z.object({
+      types: z.array(
+        z.object({
+          label: z.string().nonempty(),
+          description: z.string().optional(),
+          price: z.number().positive(),
+        })
+      ),
+      mile: z.number().positive(),
+      steps: z.object({
+        up: z.number().positive(),
+        down: z.number().positive(),
       })
     })
   })

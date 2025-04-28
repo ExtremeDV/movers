@@ -25,6 +25,13 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
+  content: {
+    preview: {
+      // force module initialization on dev env
+      dev: true
+    }
+  },
+
   nitro: {
     prerender: {
       routes: [
