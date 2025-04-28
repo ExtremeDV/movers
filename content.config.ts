@@ -104,10 +104,8 @@ export const collections = {
         })
       ),
       mile: z.number().positive(),
-      steps: z.object({
-        up: z.number().positive(),
-        down: z.number().positive(),
-      })
+      stepUp: z.number().positive(),
+      stepDown: z.number().positive(),
     })
   })
 }
