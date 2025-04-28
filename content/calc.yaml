@@ -1,0 +1,8 @@
+mile: 100
+types:
+  - label: piano 1
+    description: "Piano 1"
+    price: 100
+steps:
+  - up: 4
+    down: 7
