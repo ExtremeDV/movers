@@ -6,6 +6,7 @@ const createEnum = (options: [string, ...string[]]) => z.enum(options)
 const createBaseSchema = () => z.object({
   title: z.string().nonempty(),
   description: z.string().nonempty(),
+  postscriptum: z.string().optional(),
 })
 
 const createLinkSchema = () => z.object({
@@ -36,7 +37,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
       section: createBaseSchema().extend({
-        abc: z.string().optional(),
         headline: z.string().optional(),
         images: z.object({
           mobile: z.string().optional(),
@@ -49,6 +49,9 @@ export const collections = {
         )
       }),
       features: createBaseSchema().extend({
+        features: z.array(createFeatureSchema())
+      }),
+      whywe: createBaseSchema().extend({
         features: z.array(createFeatureSchema())
       }),
       steps: createBaseSchema().extend({
@@ -92,8 +95,8 @@ export const collections = {
       })
     })
   }),
-  calc: defineCollection({
-    source: 'calc.yml',
+  price: defineCollection({
+    source: 'price.yml',
     type: 'data',
     schema: z.object({
       types: z.array(

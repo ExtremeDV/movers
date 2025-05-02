@@ -51,73 +51,29 @@ function onSubmit() {
 
 <template>
   <USeparator
-    icon="i-simple-icons-nuxtdotjs"
     class="h-px"
   />
 
   <UFooter :ui="{ top: 'border-b border-default' }">
     <template #top>
       <UContainer>
-        <UFooterColumns :columns="columns">
-          <template #right>
-            <form @submit.prevent="onSubmit">
-              <UFormField
-                name="email"
-                label="Subscribe to our newsletter"
-                size="lg"
-              >
-                <UInput
-                  v-model="email"
-                  type="email"
-                  class="w-full"
-                  placeholder="Enter your email"
-                >
-                  <template #trailing>
-                    <UButton
-                      type="submit"
-                      size="xs"
-                      label="Subscribe"
-                    />
-                  </template>
-                </UInput>
-              </UFormField>
-            </form>
-          </template>
-        </UFooterColumns>
+        <p class="text-center font-bold text-xl m-2">RHIMO - <span class="text-primary">MOVERS.COM</span></p>
+        <p class="text-sm text-muted text-center whitespace-pre-line">
+          <span class="font-bold text-white">Flat Rates. No Surprises.</span> <br>
+          Every service is billed at a flat rate, so you know the full cost up front. No hidden fees, no last‑minute changes.
+        </p>
       </UContainer>
     </template>
 
     <template #left>
-      <p class="text-sm text-muted">
+      <p class="text-sm text-muted text-center">
         Copyright © {{ new Date().getFullYear() }}. All rights reserved.
       </p>
     </template>
-
     <template #right>
-      <UButton
-        to="#"
-        target="_blank"
-        icon="i-simple-icons-discord"
-        aria-label="Discord"
-        color="neutral"
-        variant="ghost"
-      />
-      <UButton
-        to="#"
-        target="_blank"
-        icon="i-simple-icons-x"
-        aria-label="X"
-        color="neutral"
-        variant="ghost"
-      />
-      <UButton
-        to="https://github.com/nuxt-ui-pro/landing"
-        target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="GitHub"
-        color="neutral"
-        variant="ghost"
-      />
-    </template>
+      <p class="text-sm text-muted text-center">
+        Dev by NeedApp 2025
+      </p>
+      </template>
   </UFooter>
 </template>

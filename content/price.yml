@@ -1,0 +1,31 @@
+mile: 4
+stepUp: 8
+stepDown: 7
+types:
+  - label: Small Upright (less than 40” high)
+    description:
+    price: 185
+  - label: Regular Upright (40”–46” high)
+    description:
+    price: 185
+  - label: Large or Grand Upright (47”–55” high)
+    description:
+    price: 195
+  - label: Baby Grand (4’5”–5’5” length)
+    description:
+    price: 325
+  - label: Medium Grand (5’6”–5’9”)
+    description:
+    price: 330
+  - label: Full Grand (5’10”–6’3”)
+    description:
+    price: 350
+  - label: Recital Grand (6’4”–6’9”)
+    description:
+    price: 420
+  - label: Parlour Grand (6’10”–7’10”)
+    description:
+    price: 550
+  - label: Concert Grand (7’11” and up)
+    description:
+    price: 700

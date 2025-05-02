@@ -44,7 +44,7 @@ useSeoMeta({
       :features="page.section.features"
       orientation="horizontal"
       :ui="{
-        container: 'lg:px-0 2xl:px-20 mx-0 max-w-none md:mr-10',
+        container: 'lg:px-2 2xl:px-20 mx-0 max-w-none md:mr-10',
         features: 'gap-0'
       }"
       reverse
@@ -66,7 +66,33 @@ useSeoMeta({
         class="block lg:hidden 2xl:block 2xl:w-full 2xl:max-w-2xl"
       >
     </UPageSection>
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+    <div class="w-full md:w-2/3 mx-auto p-2 text-center"><p>{{ page.section.postscriptum }}  </p></div>
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+    <!-- <UPageCTA
+      v-bind="page.cta"
+      variant="naked"
+      class="overflow-hidden @container"
+    >
+      <template #title>
+        <MDC :value="page.cta.title" />
 
+        <div class="@max-[1280px]:hidden">
+          <UColorModeImage
+            light="/images/light/line-6.svg"
+            dark="/images/dark/line-6.svg"
+            class="absolute left-10 -top-10 sm:top-0 h-full"
+          />
+          <UColorModeImage
+            light="/images/light/line-7.svg"
+            dark="/images/dark/line-7.svg"
+            class="absolute right-0 bottom-0 h-full"
+          />
+        </div>
+      </template>
+      <LazyStarsBg />
+    </UPageCTA> -->
+     
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
@@ -119,29 +145,31 @@ useSeoMeta({
           v-for="(step, index) in page.steps.items"
           :key="index"
           class="group"
-          :ui="{ container: 'p-4 sm:p-4', title: 'flex items-center gap-1' }"
+          :ui="{ container: 'p-4 sm:p-4', title: 'flex items-start gap-1' }"
         >
-          <UColorModeImage
+        <template #header>
+          <img
             v-if="step.image"
-            :light="step.image?.light"
-            :dark="step.image?.dark"
+            :src="step.image?.dark"
             :alt="step.title"
-            class="size-full"
+            class="lg:block left-0 w-full max-w-2xl"
           />
-
-          <div class="flex flex-col gap-2">
+        </template>
+          <template #title>
             <span class="text-lg font-semibold">
               {{ step.title }}
             </span>
+          </template>
+          <template #description>
             <span class="text-sm text-muted">
               {{ step.description }}
             </span>
-          </div>
+          </template>
         </UPageCard>
       </template>
     </UPageSection>
 
-    <UPageSection
+    <!-- <UPageSection
       id="pricing"
       class="mb-32 overflow-hidden"
       :title="page.pricing.title"
@@ -177,9 +205,40 @@ useSeoMeta({
           :button="plan.button"
         />
       </UPricingPlans>
-    </UPageSection>
+    </UPageSection> -->
+
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
+      id="calc"
+      description="Know the real cost — no surprises. Place your order now!"
+      :ui="{
+        title: 'text-left @container relative flex',
+        description: 'text-left'
+      }"
+      class="relative overflow-hidden"
+    >
+      <div class="absolute rounded-full -left-10 top-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
+      <div class="absolute rounded-full -right-10 -bottom-10 size-[300px] z-10 bg-primary opacity-30 blur-[200px]" />
+      <template #title>
+        <MDC
+          value="Estimate [the cost]{.text-primary}"
+          class="*:leading-9"/>
+        <div class="hidden @min-[1020px]:block">
+          <UColorModeImage
+            light="/images/light/line-2.svg"
+            dark="/images/dark/line-2.svg"
+            class="absolute top-0 right-0 size-full transform scale-95 translate-x-[70%]"
+          />
+        </div>
+      </template>
+      <Calculate />
+    </UPageSection>
+
+    <USeparator :ui="{ border: 'border-primary/30' }" />
+
+    <!-- <UPageSection
       id="testimonials"
       :title="page.testimonials.title"
       :description="page.testimonials.description"
@@ -214,35 +273,17 @@ useSeoMeta({
           </UPageCard>
         </UPageColumns>
       </UContainer>
-    </UPageSection>
-
+    </UPageSection> -->
     <USeparator />
-
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden @container"
-    >
+    <UPageSection
+      :ui="{ title: 'text-left @container relative', description: 'text-left' }"
+      class="relative overflow-hidden"
+      :features="page.whywe.features">
       <template #title>
-        <MDC :value="page.cta.title" />
-
-        <div class="@max-[1280px]:hidden">
-          <UColorModeImage
-            light="/images/light/line-6.svg"
-            dark="/images/dark/line-6.svg"
-            class="absolute left-10 -top-10 sm:top-0 h-full"
+        <MDC
+          :value="page.whywe.title"
           />
-          <UColorModeImage
-            light="/images/light/line-7.svg"
-            dark="/images/dark/line-7.svg"
-            class="absolute right-0 bottom-0 h-full"
-          />
-        </div>
       </template>
-
-      <div class="absolute rounded-full dark:bg-primary blur-[250px] size-40 sm:size-50 transform -translate-x-1/2 left-1/2 -translate-y-80" />
-
-      <LazyStarsBg />
-    </UPageCTA>
+      </UPageSection>
   </div>
 </template>
