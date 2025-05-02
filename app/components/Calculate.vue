@@ -44,7 +44,7 @@
           <div class="mx-auto">
             <ul>
               <p class="font-bold">Calculation details:</p>
-              <li><span>Base cost:</span> $ {{ type?.price || "Не выбран груз" }}</li>
+              <li><span>Base cost:</span> $ {{ type?.price || "No change item" }}</li>
               <USeparator />
               <li><span>Distance:</span> $ {{ miles * (price?.mile ?? 0) }}</li>
               <USeparator />
