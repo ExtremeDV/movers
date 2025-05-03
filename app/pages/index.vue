@@ -26,6 +26,7 @@ useSeoMeta({
     </div>
 
     <UPageHero
+      id="home"
       :headline="page.hero.headline"
       :description="page.description"
       :links="page.hero.links"
@@ -69,34 +70,11 @@ useSeoMeta({
     <USeparator :ui="{ border: 'border-primary/30' }" />
     <div class="w-full md:w-2/3 mx-auto p-2 text-center"><p>{{ page.section.postscriptum }}  </p></div>
     <USeparator :ui="{ border: 'border-primary/30' }" />
-    <!-- <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden @container"
-    >
-      <template #title>
-        <MDC :value="page.cta.title" />
 
-        <div class="@max-[1280px]:hidden">
-          <UColorModeImage
-            light="/images/light/line-6.svg"
-            dark="/images/dark/line-6.svg"
-            class="absolute left-10 -top-10 sm:top-0 h-full"
-          />
-          <UColorModeImage
-            light="/images/light/line-7.svg"
-            dark="/images/dark/line-7.svg"
-            class="absolute right-0 bottom-0 h-full"
-          />
-        </div>
-      </template>
-      <LazyStarsBg />
-    </UPageCTA> -->
-     
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
-      id="features"
+      id="services"
       :description="page.features.description"
       :features="page.features.features"
       :ui="{
@@ -169,45 +147,6 @@ useSeoMeta({
       </template>
     </UPageSection>
 
-    <!-- <UPageSection
-      id="pricing"
-      class="mb-32 overflow-hidden"
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :plans="page.pricing.plans"
-      :ui="{ title: 'text-left @container relative', description: 'text-left' }"
-    >
-      <template #title>
-        <MDC :value="page.pricing.title" />
-
-        <div class="hidden @min-[1120px]:block">
-          <UColorModeImage
-            light="/images/light/line-4.svg"
-            dark="/images/dark/line-4.svg"
-            class="absolute top-0 right-0 size-full transform translate-x-[60%]"
-          />
-        </div>
-      </template>
-
-      <UPricingPlans scale>
-        <UPricingPlan
-          v-for="(plan, index) in page.pricing.plans"
-          :key="index"
-          :title="plan.title"
-          :description="plan.description"
-          :price="plan.price"
-          :billing-period="plan.billing_period"
-          :billing-cycle="plan.billing_cycle"
-          :highlight="plan.highlight"
-          :scale="plan.highlight"
-          variant="soft"
-          :features="plan.features"
-          :button="plan.button"
-        />
-      </UPricingPlans>
-    </UPageSection> -->
-
-
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
     <UPageSection
@@ -238,44 +177,9 @@ useSeoMeta({
 
     <USeparator :ui="{ border: 'border-primary/30' }" />
 
-    <!-- <UPageSection
-      id="testimonials"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    >
-      <template #headline>
-        <UColorModeImage
-          light="/images/light/line-5.svg"
-          dark="/images/dark/line-5.svg"
-          class="absolute -top-10 sm:top-0 right-1/2 h-24"
-        />
-      </template>
-      <template #title>
-        <MDC :value="page.testimonials.title" />
-      </template>
-
-      <UContainer>
-        <UPageColumns class="xl:columns-3">
-          <UPageCard
-            v-for="(testimonial, index) in page.testimonials.items"
-            :key="index"
-            variant="subtle"
-            :description="testimonial.quote"
-            :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
-          >
-            <template #footer>
-              <UUser
-                v-bind="testimonial.user"
-                size="xl"
-              />
-            </template>
-          </UPageCard>
-        </UPageColumns>
-      </UContainer>
-    </UPageSection> -->
     <USeparator />
     <UPageSection
+      id="whywe"
       :ui="{ title: 'text-left @container relative', description: 'text-left' }"
       class="relative overflow-hidden"
       :features="page.whywe.features">

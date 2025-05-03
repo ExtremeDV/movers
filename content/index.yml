@@ -98,77 +98,7 @@ steps:
       image:
         light: '/images/move02.JPG'
         dark: '/images/move02.JPG'
-pricing:
-  title: Choose your [productivity]{.text-primary} path
-  description: Unlock AI-powered coding efficiency with our flexible plans. Whether you're a solo developer or part of a team, we have the perfect toolset to maximize your development workflow.
-  plans:
-    - title: Pro Developer
-      description: Perfect for individual developers focused on maximizing productivity.
-      price: $199
-      features:
-        - AI productivity tracking to optimize your peak coding hours
-        - Smart distraction alerts to maintain deep focus
-        - Personal code snippet library for faster development
-        - Deep Work Mode with Pomodoro timer integration
-        - Performance analytics dashboard
-        - Priority email support
-      button:
-        label: Buy now
-        color: neutral
-        variant: outline
-        to: '#'
-    - title: Team Developer
-      description: For bootstrappers and indie hackers.
-      price: $199
-      features:
-        - Everything in Pro Developer
-        - Team productivity analytics and insights
-        - Collaborative code snippet sharing
-        - Cross-team performance tracking
-        - Synchronized deep work sessions
-        - Priority team support with dedicated manager
-      button:
-        label: Buy now
-        variant: subtle
-        to: '#'
-testimonials:
-  title: Join thousands of productive [developers]{.text-primary}
-  description: See how developers are transforming their coding workflow and achieving more with our AI-powered platform.
-  items:
-    - quote: Since using this tool, my productivity has doubled. The AI insights helped me find my perfect coding rhythm and now I ship features twice as fast.
-      user:
-        name: 'Sarah Doe'
-        description: 'Full Stack Developer'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: Game-changer for our team. The focus tracking and smart alerts helped us reduce meeting interruptions by 40% and increased our sprint velocity.
-      user:
-        name: 'Sébastien Doe'
-        description:  'Lead Software Engineer'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
-    - quote: Finally, a productivity tool that understands developers. The AI features helped me identify my peak coding hours and now I accomplish more in less time.
-      user:
-        name: 'Benjamin Doe'
-        description:  'Senior Frontend Developer'
-        target: _blank
-        avatar:
-          src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
-cta:
-  title: Build your landing page with [Nuxt UI Pro]{.text-primary}
-  description: Nuxt UI Pro is free in development, but you need a license to use it in production.
-  links:
-    - label: Buy now
-      to: 'https://ui.nuxt.com/pro/purchase'
-      target: _blank
-      icon: i-lucide-shopping-cart
-    - label: License
-      to: 'https://ui.nuxt.com/getting-started/license'
-      trailingIcon: i-lucide-circle-help
-      target: _blank
-      variant: subtle
+
 whywe:
   title: Why Choose [Rhino Movers]{.text-primary}
   features:

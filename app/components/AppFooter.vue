@@ -73,8 +73,8 @@ function onSubmit() {
     <template #right>
       <p class="text-sm text-muted text-center">
         Dev by NeedApp 2025
-        <UColorModeSwitch />
       </p>
+      <UColorModeButton />
       </template>
   </UFooter>
 </template>

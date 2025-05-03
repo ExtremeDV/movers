@@ -1,28 +1,46 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp()
-const { activeHeadings, updateHeadings } = useScrollspy()
+  const nuxtApp = useNuxtApp();
+  const { activeHeadings, updateHeadings } = useScrollspy();
 
-const items = computed(() => [{
-  label: 'Features',
-  to: '#features',
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
-}, {
-  label: 'Services',
-  to: '#pricing',
-  active: activeHeadings.value.includes('pricing')
-}, {
-  label: ' Calc',
-  to: '#testimonials',
-  active: activeHeadings.value.includes('testimonials') && !activeHeadings.value.includes('pricing')
-}])
+  const items = computed(() => [
+    {
+      label: "Home",
+      to: "/",
+      active:
+        activeHeadings.value.includes("home") &&
+        !activeHeadings.value.includes("calc"),
+    },
+    {
+      label: "Services",
+      to: "#services",
+      active:
+        activeHeadings.value.includes("services") &&
+        !activeHeadings.value.includes("calc"),
+    },
+    {
+      label: "Calculate",
+      to: "#calc",
+      active: activeHeadings.value.includes("calc"),
+    },
+    {
+      label: "Why we",
+      to: "#whywe",
+      active:
+        activeHeadings.value.includes("whywe") &&
+        !activeHeadings.value.includes("calc"),
+    },
+  ]);
 
-nuxtApp.hooks.hookOnce('page:finish', () => {
-  updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials')
-  ].filter(Boolean) as Element[])
-})
+  nuxtApp.hooks.hookOnce("page:finish", () => {
+    updateHeadings(
+      [
+        document.querySelector("#home"),
+        document.querySelector("#services"),
+        document.querySelector("#calc"),
+        document.querySelector("#whywe"),
+      ].filter(Boolean) as Element[]
+    );
+  });
 </script>
 
 <template>
@@ -34,19 +52,11 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
     </template>
 
     <template #right>
-      <UNavigationMenu
-        :items="items"
-        variant="link"
-        class="hidden lg:block"
-      />
+      <UNavigationMenu :items="items" variant="link" class="hidden lg:block" />
     </template>
 
     <template #body>
-      <UNavigationMenu
-        :items="items"
-        orientation="vertical"
-        class="-mx-2.5"
-      />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
   </UHeader>
 </template>

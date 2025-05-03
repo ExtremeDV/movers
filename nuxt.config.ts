@@ -14,6 +14,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  colorMode: {
+    preference: 'dark', // Устанавливаем тёмную тему по умолчанию
+  },
+
   mdc: {
     highlight: {
       noApiRoute: false
