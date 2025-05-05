@@ -5,7 +5,7 @@
   const items = computed(() => [
     {
       label: "Home",
-      to: "/",
+      to: "#home",
       active:
         activeHeadings.value.includes("home") &&
         !activeHeadings.value.includes("calc"),
