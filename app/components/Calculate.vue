@@ -7,6 +7,7 @@ const upstairs = ref(0);
 const downstairs = ref(0);
 const miles = ref(0);
 const email = ref('');
+const phone = ref('');
 
 const toast = useToast();
 
@@ -36,6 +37,11 @@ const validateEmail = (email: string): boolean => {
   return emailRegex.test(email);
 };
 
+const validatePhone = (phone: string): boolean => {
+  const phoneRegex = /^\+?[1-9]\d{1,14}$/; // E.164 format
+  return phoneRegex.test(phone);
+};
+
 const submitForm = async () => {
   if (!validateEmail(email.value)) {
     showToast({
@@ -47,11 +53,22 @@ const submitForm = async () => {
     return;
   }
 
+  if (!validatePhone(phone.value)) {
+    showToast({
+      title: 'Invalid Phone Number',
+      description: 'Please enter a valid phone number.',
+      color: 'error',
+      icon: 'warning',
+    });
+    return;
+  }
+
   try {
     const { data } = await useFetch('/api/send-form', {
       method: 'POST',
       body: {
         email: email.value,
+        phone: phone.value,
         message: {
           type: type.value?.label,
           distance: miles.value,
@@ -102,6 +119,9 @@ const submitForm = async () => {
         <div class="lg:w-1/2 w-full p-2">
           <UFormField label="Enter your email" class="mb-2">
             <UInput v-model="email" type="email" class="w-full" />
+          </UFormField>
+          <UFormField label="Enter your phone number" class="mb-2">
+            <UInput v-model="phone" type="tel" class="w-full" />
           </UFormField>
           <UFormField label="Select the item" class="mb-2">
             <USelectMenu v-model="type" :items="price?.types || ['No data']" class="w-full" />
