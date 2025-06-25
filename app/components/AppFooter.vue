@@ -57,11 +57,13 @@ function onSubmit() {
   <UFooter :ui="{ top: 'border-b border-default' }">
     <template #top>
       <UContainer>
-        <p class="text-center font-bold text-xl m-2">RHIMO - <span class="text-primary">MOVERS.COM</span></p>
+        <p class="text-center font-bold text-xl m-2">RHINO - <span class="text-primary">MOVERS.COM</span></p>
         <p class="text-sm text-muted text-center whitespace-pre-line">
           <span class="font-bold text-white">Flat Rates. No Surprises.</span> <br>
-          Every service is billed at a flat rate, so you know the full cost up front. No hidden fees, no last‑minute changes.
+          Every service is billed at a flat rate, so you know the full cost up front. No hidden fees, no last‑minute changes. <br>
+          <span class="font-bold text-white">7614 Oak Park Ave Van Nuys, CA 91406, United States of America</span> <br>
         </p>
+        <p class="text-center font-bold text-xl m-2">Call RHINO <a class="text-primary" href="tel:+17472459992">+1 747 245-99-92</a></p>
       </UContainer>
     </template>
 
