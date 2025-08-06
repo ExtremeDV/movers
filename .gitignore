@@ -3,6 +3,7 @@
 .nuxt
 .cache
 dist
+.output
 
 # Node dependencies
 node_modules
