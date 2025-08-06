@@ -25,6 +25,7 @@
       :ui="{ container: 'md:pt-18 lg:pt-20' }">
       <template #title>
         <MDC :value="page.title" class="*:leading-11 sm:*:leading-19 max-w-3xl mx-auto" />
+        <div class="*:leading-11 sm:*:leading-19 max-w-3xl mx-auto"><a class="text-4xl font-medium" href="tel:+17472459992">+1 (747) 245-99-92</a></div>
       </template>
     </UPageHero>
 

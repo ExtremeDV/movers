@@ -1,6 +1,6 @@
 export default defineAppConfig({
   toaster: {
-    position: 'top-center',
+    position: 'top-center' as const,
   },
   ui: {
     colors: {

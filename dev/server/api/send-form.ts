@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
               <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; padding: 20px; border-radius: 6px;">
                 <tr>
                   <td align="center" style="font-size: 24px; font-weight: bold; padding-bottom: 10px;">
-                    <h1>Rhiho <span style="color: #83df2e;">Movers</span></h1>
+                    <h1>Rhino <span style="color: #83df2e;">Movers</span></h1>
                     <h3>New order</h3>
                   </td>
                 </tr>
