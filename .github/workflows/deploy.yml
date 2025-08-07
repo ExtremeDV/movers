@@ -51,12 +51,12 @@ jobs:
           script: |
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             echo "Docker login status: $?"
-            echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}" >> secrets.env
-            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}" >> secrets.env
-            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}" >> secrets.env
-            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}" >> secrets.env
-            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}" >> secrets.env
+            echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}"
+            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}"
+            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}"
+            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}"
+            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}"
             docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
             docker stop ${{ secrets.TITLE }} || true
             docker rm ${{ secrets.TITLE }} || true
-            docker run -d --name ${{ secrets.TITLE }} -p 3002:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest
+            docker run -d --name ${{ secrets.TITLE }} -p 3000:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest
