@@ -13,6 +13,7 @@ ENV NUXT_UI_PRO_LICENSE=$NUXT_UI_PRO_LICENSE
 RUN echo "NUXT_UI_PRO_LICENSE is: $NUXT_UI_PRO_LICENSE"
 # Увеличиваем лимит памяти
 ENV NODE_OPTIONS="--max-old-space-size=4096"
+
 RUN pnpm build
 RUN ls -la /app/.output || echo ".output не создана"
 
