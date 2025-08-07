@@ -59,4 +59,4 @@ jobs:
             docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
             docker stop ${{ secrets.TITLE }} || true
             docker rm ${{ secrets.TITLE }} || true
-            docker run -d --name ${{ secrets.TITLE }} --network apps -p 3000:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest
+            docker run -d --name ${{ secrets.TITLE }} --network projects_apps -p 3000:3000 ghcr.io/${{ secrets.REPO_NAME }}:latest
