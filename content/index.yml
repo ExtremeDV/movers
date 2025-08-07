@@ -1,7 +1,7 @@
 seo:
-  title: Big Move? Better Call RHINO-MOVERS
+  title: Rhino Piano Movers
   description: Tell us about your move — we’ll reply promptly with a clear, flat‑rate estimate and timeline.
-title:  Big Move? Better Call [RHINO-MOVERS!]{.text-primary}
+title: Big Move? Better Call [RHINO-MOVERS!]{.text-primary}
 description: Tell us about your move — we’ll reply promptly with a clear, flat‑rate estimate and timeline.
 hero:
   headline: Your Piano‑Moving Specialists — Plus Full-Service Heavy & Delicate Relocations
@@ -10,15 +10,15 @@ hero:
       icon: i-lucide-arrow-down
       trailing: true
       variant: subtle
-      to: '/#calc'
+      to: /#calc
       size: xl
 section:
   title: '[Piano Moving & Storage]{.text-primary} — Our Signature Service'
-  description: "At Rhino Movers, we take pride in being true piano‑moving experts. Whether you have an upright, baby grand, grand, or concert grand, our team and equipment are tailored for every model:"
+  description: "At Rhino\_Movers, we take pride in being true piano‑moving experts. Whether you have an upright, baby grand, grand, or concert grand, our team and equipment are tailored for every model:"
   postscriptum: Every piano move is handled by certified technicians who understand the sensitivities of soundboards, pinblocks, and legs. We coordinate with venue managers, orchestras, recital halls, and private owners — guaranteeing on‑time delivery and repositioning under any conditions.
   images:
-    mobile: '/images/piano.png'
-    desktop: '/images/piano.png'
+    mobile: /images/piano.png
+    desktop: /images/piano.png
   features:
     - title: Upright Pianos & Spinet
       description: Compact but heavy — we use low‑profile piano boards and heavy‑duty dollies to navigate tight hallways and stairs without damage.
@@ -36,47 +36,38 @@ features:
   title: Additional Items [We Move]{.text-primary}
   features:
     - title: Safes (light to ultra‑heavy)
-      # description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
       icon: teenyicons:safe-outline
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Hot Tubs & Spa Equipment
-      # description: Get notified when your focus drifts and bring your attention back.
       icon: material-symbols:hot-tub-sharp
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Vending Machines
-      # description: Save and reuse frequently used code blocks for efficiency.
       icon: game-icons:vending-machine
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Medical & Office Equipment
-      # description: Block distractions and set structured coding sessions with built-in Pomodoro timers.
       icon: medical-icon:i-cath-lab
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Speakers & Road Cases
-      # description: Sync your workflow with teammates and see when they are most productive.
       icon: material-symbols:mobile-speaker-outline
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Restaurant & Commercial Machinery
-      # description: Track your coding metrics and get insights to boost your speed and code quality.
       icon: material-symbols:table-restaurant-outline-sharp
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Large Appliances (up to 2,200 lbs)
-      # description: Track your coding metrics and get insights to boost your speed and code quality.
+    - title: "Large Appliances (up to 2,200\_lbs)"
       icon: streamline:food-kitchenware-microwave-cook-food-appliances-cooking-nutrition-appliance-microwave
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Arcade & Game Machines
-      # description: Track your coding metrics and get insights to boost your speed and code quality.
       icon: icon-park-outline:game-console-one
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: Custom Single‑Item Requests
-      # description: Track your coding metrics and get insights to boost your speed and code quality.
       icon: streamline:ecology-science-planet-solar-system-ring-planet-saturn-space-astronomy
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
@@ -86,39 +77,34 @@ steps:
     - title: Specialty & Rigging Moves
       description: Heavy, fragile, or high‑value items — from safes and hot tubs to industrial machinery — moved with professional rigging, full safety compliance, and specialized gear.
       image:
-        light: '/images/IMG_2925.JPG'
-        dark: '/images/IMG_2925.JPG'
+        light: /images/IMG_2925.JPG
+        dark: /images/IMG_2925.JPG
     - title: Small‑Scale Moves
       description: Studio apartments, storage units, home offices, or single bulky items — we bring the same attention to detail, no matter the load.
       image:
-        light: '/images/move.png'
-        dark: '/images/move.png'
+        light: /images/move.png
+        dark: /images/move.png
     - title: Local & Long‑Distance Relocations
       description: Receive personalized recommendations to enhance your coding efficiency. Watch your productivity soar with data-driven insights.
       image:
-        light: '/images/move02.JPG'
-        dark: '/images/move02.JPG'
-
+        light: /images/move02.JPG
+        dark: /images/move02.JPG
 whywe:
-  title: Why Choose [Rhino Movers]{.text-primary}
+  title: "Why Choose [Rhino\_Movers]{.text-primary}"
   features:
     - title: 'Dedicated Piano Team: Over a decade of specialized experience with every piano type and venue.'
-      # description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
       icon: game-icons:grand-piano
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: 'State‑of‑the‑Art Equipment: Hydraulic lifts, custom cradles, climate‑controlled trailers, and secure storage.'
-      # description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
       icon: material-symbols:forklift-rounded
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: 'Fully Insured & Licensed: Peace of mind from pick‑up to delivery.'
-      # description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
       icon: map:insurance-agency
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
     - title: 'White‑Glove Service: Protective wrapping, floor runners, and on‑site coordination with venue staff.'
-      # description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
       icon: icon-park-outline:clothes-gloves
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
