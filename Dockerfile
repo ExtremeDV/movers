@@ -6,6 +6,11 @@ COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm install
 RUN pnpm add -D tailwindcss
 COPY . .
+# Принимаем переменную для сборки
+ARG NUXT_UI_PRO_LICENSE
+ENV NUXT_UI_PRO_LICENSE=$NUXT_UI_PRO_LICENSE
+# Диагностика
+RUN echo "NUXT_UI_PRO_LICENSE is: $NUXT_UI_PRO_LICENSE"
 # Увеличиваем лимит памяти
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN pnpm build
@@ -17,5 +22,6 @@ FROM node:22-slim
 COPY --from=builder /app/.output .output
 COPY --from=builder /app/package.json .
 
-EXPOSE 80
+EXPOSE 3000
+ENV NODE_ENV=production
 CMD ["sh", "-c", "node .output/server/index.mjs"]
