@@ -26,3 +26,5 @@ COPY --from=builder /app/package.json .
 EXPOSE 3000
 ENV NODE_ENV=production
 CMD ["sh", "-c", "node .output/server/index.mjs"]
+
+# version: 1.0.0
