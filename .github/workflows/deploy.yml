@@ -51,12 +51,12 @@ jobs:
           script: |
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             echo "Docker login status: $?"
-            echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}"
-            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}"
-            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}"
-            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}"
-            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}"
+            echo "NUXT_EMAIL_USER=${{ secrets.NUXT_EMAIL_USER }}" > ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_PASS=${{ secrets.NUXT_EMAIL_PASS }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }}" >> ${{ secrets.TITLE }}.env
+            echo "NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }}" >> ${{ secrets.TITLE }}.env
             docker pull ghcr.io/${{ secrets.REPO_NAME }}:latest
             docker stop ${{ secrets.TITLE }} || true
             docker rm ${{ secrets.TITLE }} || true
-            docker run -d --name ${{ secrets.TITLE }} --network projects_apps ghcr.io/${{ secrets.REPO_NAME }}:latest
+            docker run -d --name ${{ secrets.TITLE }} --network projects_apps --env-file ${{ secrets.TITLE }}.env ghcr.io/${{ secrets.REPO_NAME }}:latest
