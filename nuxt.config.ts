@@ -25,6 +25,15 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  app: {
+    head: {
+      title: 'Rhino Piano Movers', // default fallback title
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  },
+
   colorMode: {
     preference: 'dark', // Устанавливаем тёмную тему по умолчанию
   },
