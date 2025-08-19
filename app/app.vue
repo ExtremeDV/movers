@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <UApp :toaster="{ expand: false }">
+  <UApp :toaster="{ expand: false , position: 'top-center'}">
     <AppHeader />
 
     <UMain class="relative">
